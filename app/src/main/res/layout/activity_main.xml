@@ -29,7 +29,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="24dp"
-        android:id="@+id/strike_count"
+        android:id="@+id/strikeTextView"
+        android:text="@string/strikestart"
         android:textColor="#ffffff" />
     </LinearLayout>
 
@@ -49,8 +50,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="24dp"
-        android:id="@+id/ball_count"
-        android:textColor="#ffffff" />
+        android:id="@+id/ballTextView"
+        android:textColor="#ffffff"
+        android:text="@string/ballstart"/>
+
     </LinearLayout>
 
     <LinearLayout

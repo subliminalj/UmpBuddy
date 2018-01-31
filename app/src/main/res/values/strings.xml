@@ -6,4 +6,6 @@
     <string name="ball_text">Ball:</string>
     <string name="walk_toast">WALK!</string>
     <string name="out_toast">OUT!</string>
+    <string name="strikestart">Zero</string>
+    <string name="ballstart">Zero</string>
 </resources>

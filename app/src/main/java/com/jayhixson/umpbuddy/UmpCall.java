@@ -1,5 +1,9 @@
 package com.jayhixson.umpbuddy;
 
+import android.widget.Toast;
+
+import static com.jayhixson.umpbuddy.R.layout.activity_main;
+
 /**
  * Created by jayhixson on 1/30/18.
  */
@@ -30,17 +34,17 @@ public class UmpCall {
 
     public void strike(){
         mStrikeCount++;
-        if (mStrikeCount>3) {
-            //CALL OUT TOAST
-            mStrikeCount = 0;
+        if (mStrikeCount>3){
+            mStrikeCount =0;
+            mBallCount = 0;
         }
-
     }
     public void ball(){
         mBallCount++;
         if (mBallCount>4){
-            //CALL WALK TOAST
+            mStrikeCount = 0;
             mBallCount = 0;
         }
     }
+
 }
