@@ -27,4 +27,17 @@ public class UmpCall {
     public int getStrikeCount() {
         return mStrikeCount;
     }
+
+    public void strike(){
+        mStrikeCount++;
+        if (mStrikeCount>3) {
+            //CALL OUT TOAST
+        }
+    }
+    public void ball(){
+        mBallCount++;
+        if (mBallCount>4){
+            //CALL WALK TOAST
+        }
+    }
 }
