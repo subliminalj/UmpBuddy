@@ -4,4 +4,6 @@
     <string name="strike_button">Strike</string>
     <string name="strike_count">Strike 0</string>
     <string name="ball_count">Ball 0</string>
+    <string name="walk_toast">WALK!</string>
+    <string name="out_toast">OUT!</string>
 </resources>

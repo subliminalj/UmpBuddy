@@ -17,12 +17,14 @@ public class MainActivity extends AppCompatActivity {
     mBallButton.setOnClickListener(new View.OnClickListener(){
         @Override public void onClick(View v) {
             // not yet implemented
+            // umpCall.ball();
         }
     });
     mStrikeButton = (Button) findViewById(R.id.strike_button);
     mStrikeButton.setOnClickListener(new View.OnClickListener(){
         @Override public void onClick(View v) {
             // not yet implemented
+            // umpCall.strike();
         }
     });
     }
