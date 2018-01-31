@@ -32,12 +32,15 @@ public class UmpCall {
         mStrikeCount++;
         if (mStrikeCount>3) {
             //CALL OUT TOAST
+            mStrikeCount = 0;
         }
+
     }
     public void ball(){
         mBallCount++;
         if (mBallCount>4){
             //CALL WALK TOAST
+            mBallCount = 0;
         }
     }
 }
