@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -28,6 +29,10 @@ public class MainActivity extends AppCompatActivity {
         @Override public void onClick(View v) {
              mUmpCalls.ball();
              updateDisplay();
+            if (mUmpCalls.getBallCount()==0){
+                Toast.makeText(getApplicationContext(),R.string.walk_toast,Toast.LENGTH_SHORT).show();
+            }
+
         }
     });
     mStrikeButton = (Button) findViewById(R.id.strike_button);
@@ -35,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
         @Override public void onClick(View v) {
              mUmpCalls.strike();
              updateDisplay();
+            if (mUmpCalls.getStrikeCount()==0){
+                Toast.makeText(getApplicationContext(),R.string.out_toast,Toast.LENGTH_SHORT).show();
+            }
         }
     });
     }
