@@ -13,8 +13,6 @@ public class MainActivity extends AppCompatActivity {
 
         private Button mBallButton;
         private Button mStrikeButton;
-        //private TextView mBallTextView;
-        //private TextView mStrikeTextView;
         private UmpCall mUmpCalls = new UmpCall(0,0);
 
     @Override
@@ -43,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
             if (mUmpCalls.getStrikeCount()==0){
                 Toast.makeText(getApplicationContext(),R.string.out_toast,Toast.LENGTH_SHORT).show();
             }
+
         }
     });
     }
@@ -53,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
 
         TextView mStrikeTextView = (TextView)findViewById(R.id.strikeTextView);
         mStrikeTextView.setText(Integer.toString(mUmpCalls.getStrikeCount()));
+
+        TextView mInningTextView = (TextView)findViewById(R.id.inningTextView);
+        mInningTextView.setText(Integer.toString(mUmpCalls.getInningCount()));
     }
 
 }

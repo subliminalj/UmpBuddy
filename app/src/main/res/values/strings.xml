@@ -6,6 +6,8 @@
     <string name="ball_text">Ball:</string>
     <string name="walk_toast">WALK!</string>
     <string name="out_toast">OUT!</string>
-    <string name="strikestart">Zero</string>
-    <string name="ballstart">Zero</string>
+    <string name="strikestart">0</string>
+    <string name="ballstart">0</string>
+    <string name="inning_text">Inning:</string>
+    <string name="inningstart">1</string>
 </resources>

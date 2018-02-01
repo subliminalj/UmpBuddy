@@ -11,9 +11,13 @@ import static com.jayhixson.umpbuddy.R.layout.activity_main;
 public class UmpCall {
     private int mBallCount;
     private int mStrikeCount;
+    private int mOutCount;
+    private int mInning;
+
     public UmpCall(int ballCount, int strikeCount){
         mBallCount = ballCount;
         mStrikeCount = strikeCount;
+        mInning = 1;
     }
 
     public void setBallCount(int ballCount) {
@@ -24,19 +28,26 @@ public class UmpCall {
         mStrikeCount = strikeCount;
     }
 
+    public void setOutCount(int outCount) {mOutCount = outCount; }
+
+    public void setInning(int inning) { mInning = inning; }
+
     public int getBallCount() {
         return mBallCount;
     }
 
-    public int getStrikeCount() {
-        return mStrikeCount;
-    }
+    public int getStrikeCount() { return mStrikeCount; }
+
+    public int getOutCount() { return mOutCount; }
+
+    public int getInningCount() { return mInning; }
 
     public void strike(){
         mStrikeCount++;
         if (mStrikeCount>3){
             mStrikeCount =0;
             mBallCount = 0;
+            out();
         }
     }
     public void ball(){
@@ -46,5 +57,18 @@ public class UmpCall {
             mBallCount = 0;
         }
     }
+    public void out(){
+        mOutCount++;
+        if (mOutCount>3){
+            newInning();
+            mOutCount=0;
+        }
+    }
 
+    public void newInning(){
+        mInning++;
+        if (mInning>10){
+            //implement extra inning logic with alert dialog
+        }
+    }
 }
