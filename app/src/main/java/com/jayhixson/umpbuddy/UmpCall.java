@@ -46,7 +46,7 @@ public class UmpCall {
 
     public void strike(){
         mStrikeCount++;
-        if (mStrikeCount>3){
+        if (mStrikeCount>2){
             mStrikeCount =0;
             mBallCount = 0;
             out();
@@ -61,9 +61,8 @@ public class UmpCall {
     }
     public void out(){
         mOutCount++;
-        if (mOutCount>2){
+        if ((mOutCount%6)==0){
             newInning();
-            mOutCount=0;
         }
     }
 
