@@ -10,4 +10,6 @@
     <string name="ballstart">0</string>
     <string name="inning_text">Inning:</string>
     <string name="inningstart">1</string>
+    <string name="out_text">Out:</string>
+    <string name="outstart">0</string>
 </resources>

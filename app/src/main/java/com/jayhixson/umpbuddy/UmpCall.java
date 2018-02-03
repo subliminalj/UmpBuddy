@@ -1,5 +1,7 @@
 package com.jayhixson.umpbuddy;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.widget.Toast;
 
 import static com.jayhixson.umpbuddy.R.layout.activity_main;
@@ -59,7 +61,7 @@ public class UmpCall {
     }
     public void out(){
         mOutCount++;
-        if (mOutCount>3){
+        if (mOutCount>2){
             newInning();
             mOutCount=0;
         }
@@ -67,8 +69,6 @@ public class UmpCall {
 
     public void newInning(){
         mInning++;
-        if (mInning>10){
-            //implement extra inning logic with alert dialog
-        }
+        //neverending innings!
     }
 }
